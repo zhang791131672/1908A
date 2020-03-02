@@ -18,8 +18,8 @@
         <tr>
         @foreach($data as $v)
             <td>{{$v->c_id}}</td>
-            <td>{{$v->c_name}}</td>
-            <td>{{str_repeat('|——',$v->level)}}{{$v->pid}}</td>
+            <td>{!! str_repeat('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',$v->level) !!}{{$v->c_name}}</td>
+            <td>{{$v->pid}}</td>
             <td>{{$v->c_detail}}</td>
             <td>
               <a href="{{url('classify/edit/'.$v->c_id)}}">编辑</a>|

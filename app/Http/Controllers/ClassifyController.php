@@ -15,7 +15,7 @@ class ClassifyController extends Controller
     public function index()
     {
         $data = Classify::get();
-        //dd($data);
+        $data = $this->CreateTree($data);
         return view('classify.index',['data'=>$data]);
     }
 
