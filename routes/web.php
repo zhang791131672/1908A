@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::prefix('brand')->group(function(){
+
+    Route::get('create','BrandController@create');
+    Route::post('store','BrandController@store');
+    Route::get('/','BrandController@index');
+    Route::get('edit/{id}','BrandController@edit');
+    Route::post('update/{id}','BrandController@update');
+    Route::get('destroy/{id}','BrandController@destroy');
+  
+  });
