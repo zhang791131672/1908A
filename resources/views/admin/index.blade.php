@@ -16,8 +16,6 @@
 		<tr>
 			<th>管理员id</th>
 			<th>用户名</th>
-			<th>密码</th>
-			
 			<th>头像</th>
 			<th>操作</th>
 		</tr>
@@ -27,10 +25,7 @@
 		<tr @if($k%2==0) class="active" @else class="success" @endif>
 			<td>{{$v->admin_id}}</td>
 			<td>{{$v->admin_user}}</td>
-			<td>{{$v->admin_pwd}}</td>
-			
 			<td>@if($v->admin_img)<img src="{{env('UPLOADS_URL')}}{{$v->admin_img}}" width="50" height="50">@endif</td>
-			
 			<td><a href="{{url('admin/edit/'.$v->admin_id)}}" class="btn btn-info">编辑</a>
 				<a href="{{url('admin/destroy/'.$v->admin_id)}}" class="btn btn-danger">删除</a></td>
 		</tr>
